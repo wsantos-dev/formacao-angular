@@ -11,8 +11,10 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template: `
-    {{ valor }}
-    <button (click)="adicionar()">Adicionar</button>
+    <app-title *ngIf="destruir"></app-title>
+    <br>
+
+    <button (click)="destruirComponent()">Destruir Componente</button>
     <router-outlet></router-outlet>
   `
 })
@@ -26,13 +28,19 @@ export class AppComponent implements
   
 
   public valor:number = 1;
+  public destruir: boolean = true;
 
   constructor(){
 
   }
 
-  public adicionar(){
+  public adicionar(): void{
     this.valor += 1;
+  }
+
+  public destruirComponent(): void {
+    debugger
+    this.destruir = false;
   }
 
   ngOnInit(): void {
