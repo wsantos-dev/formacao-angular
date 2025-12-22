@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBidingComponent implements OnInit {
 
+
   public nome: string = 'Wellington'
   public idade: number = 40
   public maisUm:number = 1
@@ -14,9 +15,21 @@ export class DataBidingComponent implements OnInit {
   public checkedDisable: boolean = false
   public imgSrc: string = '/assets/angular-icon.svg'
   public imgTitle: string = 'Property Biding Angular'
+  
+  public position: { x: number, y: number } = { x: 0, y: 0}
+
+
+  public alertaInfo(valor: MouseEvent) {
+    console.log(valor)
+  }
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  public mouseMoveTeste(valor: MouseEvent) {
+    this.position.x = valor.offsetX;
+    this.position.y = valor.offsetY;
+  }
 }
