@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class DataBidingComponent implements OnInit {
 
   public nome: string = 'Wellington'
-  public idade:number = 40
+  public idade: number = 40
+  public maisUm:number = 1
 
+  public checkedDisable: boolean = false
+  public imgSrc: string = '/assets/angular-icon.svg'
+  public imgTitle: string = 'Property Biding Angular'
   constructor() { }
 
   ngOnInit(): void {
