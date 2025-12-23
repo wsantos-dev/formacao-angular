@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    width: 420px;
+    align-items: center;
+}
+
+.active {
+    background-color: tomato;
+    flex-grow: 1;
+}
+
+.disabled {
+    background-color: royalblue;
+    flex-grow: 1
+}
+
+.active, .disabled {
+    font-size: 2.3em;
+    color:white;
+}
