@@ -7,8 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiretivasEstruturaisComponent implements OnInit {
 
+
   public condition: boolean = true;
   public conditionClick: boolean = true;
+  
+  public list: Array<{nome: string, idade:number}> = [
+    {nome: 'João da Silva', idade: 30},
+    {nome: 'Francisco Fernando', idade: 22},
+    {nome: 'Gustavo Falcão', idade: 38},
+    {nome: 'Roberta Karla', idade: 45},
+    {nome: 'Silvia Victor', idade: 34},
+    {nome: 'Bruna Jéssica', idade: 24}
+  ]
+
+
 
   constructor() { }
 
@@ -35,6 +47,14 @@ export class DiretivasEstruturaisComponent implements OnInit {
         }
 
      }, 2000)
+  }
+
+  onClickAddList() {
+    this.list.push({nome: "Drih", idade: 33})
+  }
+
+  onClickEventList(event: number){
+    this.list.splice(event, 1)
   }
 
 }

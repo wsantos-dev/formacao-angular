@@ -16,3 +16,11 @@
 </p>
 
 <button (click)="exibir()">Clicar</button>
+
+<ul>
+    <li *ngFor="let item of list let i = index" (click)="onClickEventList(i)">
+        [{{i}}] -  {{item.nome}} | Idade = {{item.idade}}
+    </li>
+</ul>
+
+<button (click)="onClickAddList()">Adicionar</button>
