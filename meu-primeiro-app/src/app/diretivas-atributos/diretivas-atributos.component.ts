@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class DiretivasAtributosComponent implements OnInit {
 
   public valor: boolean = false
-  public height: string = '20px'
+  public height: string = "20px"
+  public width: string = '20px'
+  public backgroundColor: string = 'tomato'
 
   constructor() { }
 
@@ -21,8 +23,12 @@ export class DiretivasAtributosComponent implements OnInit {
       }
       if (this.height == '20px'){
         this.height = '50px'
+        this.width = '200px'
+        this.backgroundColor = 'royalblue'
       } else {
         this.height = '20px'
+        this.width = '20px'
+        this.backgroundColor = 'tomato';
       }
     }, 2000)
   }
