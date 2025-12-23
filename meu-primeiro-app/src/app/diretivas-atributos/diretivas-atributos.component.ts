@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class DiretivasAtributosComponent implements OnInit {
 
   public valor: boolean = false
+  public nome: string = ''
   public height: string = "20px"
   public width: string = '20px'
   public backgroundColor: string = 'tomato'
+  public list: Array<{nome: string}> = []
 
   constructor() { }
 
@@ -31,6 +33,11 @@ export class DiretivasAtributosComponent implements OnInit {
         this.backgroundColor = 'tomato';
       }
     }, 2000)
+  }
+
+  salvar():void {
+    this.list.push({ nome: this.nome})
+    this.nome = ''
   }
 
 }
