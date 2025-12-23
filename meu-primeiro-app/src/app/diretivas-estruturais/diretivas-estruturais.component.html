@@ -24,3 +24,21 @@
 </ul>
 
 <button (click)="onClickAddList()">Adicionar</button>
+
+<hr>
+
+<input type="text" [(ngModel)]="fruta">
+<div [ngSwitch]="fruta">
+    <p *ngSwitchCase="'Maçã'">
+        Maçã
+    </p>
+    <p *ngSwitchCase="'Morango'">
+        Morango
+    </p>
+    <p *ngSwitchCase="'Manga'">
+        Manga
+    </p>
+    <p *ngSwitchDefault>
+        Aguardando o valor a ser digitado.
+    </p>
+</div>

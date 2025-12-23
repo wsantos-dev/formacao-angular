@@ -10,6 +10,7 @@ export class DiretivasEstruturaisComponent implements OnInit {
 
   public condition: boolean = true;
   public conditionClick: boolean = true;
+  public fruta: string =  ''
   
   public list: Array<{nome: string, idade:number}> = [
     {nome: 'João da Silva', idade: 30},
@@ -19,8 +20,6 @@ export class DiretivasEstruturaisComponent implements OnInit {
     {nome: 'Silvia Victor', idade: 34},
     {nome: 'Bruna Jéssica', idade: 24}
   ]
-
-
 
   constructor() { }
 
@@ -56,5 +55,4 @@ export class DiretivasEstruturaisComponent implements OnInit {
   onClickEventList(event: number){
     this.list.splice(event, 1)
   }
-
 }
