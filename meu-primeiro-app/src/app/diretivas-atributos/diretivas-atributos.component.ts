@@ -12,7 +12,7 @@ export class DiretivasAtributosComponent implements OnInit {
   public height: string = "20px"
   public width: string = '20px'
   public backgroundColor: string = 'tomato'
-  public list: Array<{nome: string}> = []
+  public list: Array<{nome: string}> = [{ nome: "Wellington Santos "}]
 
   constructor() { }
 
